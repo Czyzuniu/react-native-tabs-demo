@@ -1,5 +1,8 @@
 import * as React from 'react';
-import { View, StyleSheet, Dimensions, Text} from 'react-native';
+import { ScrollView, StyleSheet, Dimensions, Text} from 'react-native';
+import NewsItemBig from "./NewsItemBig";
+import NewsItemSmall from "./NewsItemSmall";
+import {ListItem} from "react-native-elements";
 
 export default class Blogs extends React.Component {
   state = {
@@ -7,9 +10,14 @@ export default class Blogs extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>Blogs</Text>
-      </View>
+      <ScrollView style={styles.scene}>
+        <NewsItemBig/>
+        <NewsItemSmall/>
+        <NewsItemSmall/>
+        <NewsItemSmall/>
+        <NewsItemSmall/>
+        <NewsItemSmall/>
+      </ScrollView>
     );
   }
 }
